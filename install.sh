@@ -13,7 +13,8 @@ cmake \
 vlc \
 openjdk-16-jre \
 snapd \
-wget
+wget \
+obs-studio
 
 #install snap packages
 sudo snap install --classic \
