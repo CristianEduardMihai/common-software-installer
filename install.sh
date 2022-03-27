@@ -19,6 +19,13 @@ wget
 sudo snap install --classic \
 code
 
+#add minecraft configs
+mkdir ~/.minecraft
+cd ~/.minecraft
+wget https://raw.githubusercontent.com/CristianEduardMihai/common-software-installer/main/configs/options.txt
+wget https://github.com/CristianEduardMihai/common-software-installer/blob/main/configs/optionsof.txt
+
+
 #install chrome, discord, vnc viewer via deb packages
 cd ~/Downloads
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
