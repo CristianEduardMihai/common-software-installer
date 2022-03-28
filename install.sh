@@ -14,7 +14,8 @@ vlc \
 openjdk-16-jre \
 snapd \
 wget \
-obs-studio
+obs-studio \
+cheese
 
 #install snap packages
 sudo snap install --classic \
