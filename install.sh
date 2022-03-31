@@ -50,7 +50,7 @@ firefox https://extensions.gnome.org/extension/19/user-themes/ &
 
 cd
 
-git clone git clone https://github.com/vinceliuice/Orchis-theme
+git clone https://github.com/vinceliuice/Orchis-theme
 cd Orchis-theme/
 ./install.sh
 
