@@ -36,6 +36,12 @@ rm *.deb
 
 cd
 
+git clone https://github.com/vinceliuice/Orchis-theme
+cd Orchis-theme/
+./install.sh
+
+cd
+
 #Tela icon theme
 git clone https://github.com/vinceliuice/Tela-icon-theme
 cd Tela-icon-theme/
@@ -43,14 +49,9 @@ cd Tela-icon-theme/
 
 cd
 
-#open some links
-firefox https://extensions.gnome.org/extension/1160/dash-to-panel/ &
-firefox https://youtu.be/AZniwcfQh3w?t=253 &
-firefox https://extensions.gnome.org/extension/19/user-themes/ &
+#echo some links
+echo "https://extensions.gnome.org/extension/1160/dash-to-panel/"
 
-cd
+echo "https://extensions.gnome.org/extension/19/user-themes/"
 
-git clone https://github.com/vinceliuice/Orchis-theme
-cd Orchis-theme/
-./install.sh
-
+echo "https://youtu.be/AZniwcfQh3w?t=253"
