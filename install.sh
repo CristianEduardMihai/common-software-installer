@@ -34,27 +34,22 @@ rm *.deb
 
 # Install themes and icons
 
-read -r -p "Do you want to install themes and icons ? (y/N): " confirm
+cd
 
-# Confirm if the user wants to remove all default configurations
-if [[ "$confirm" =~ [Yy] ]]; then
-    cd
-    git clone git clone https://github.com/vinceliuice/Orchis-theme
-    cd Orchis-theme/
-    ./install.sh
-    cd
+git clone git clone https://github.com/vinceliuice/Orchis-theme
+cd Orchis-theme/
+./install.sh
 
-    #Tela icon theme
-    git clone https://github.com/vinceliuice/Tela-icon-theme
-    cd Tela-icon-theme/
-    ./install.sh
-    cd
+cd
 
-    #open some links
-    google-chrome https://extensions.gnome.org/extension/1160/dash-to-panel/ &
-    google-chrome https://youtu.be/AZniwcfQh3w?t=253 &
-    google-chrome https://extensions.gnome.org/extension/19/user-themes/ &
-else
-    echo "User opted to not install themes and icons. Exiting"
-    exit 1
-fi
+#Tela icon theme
+git clone https://github.com/vinceliuice/Tela-icon-theme
+cd Tela-icon-theme/
+./install.sh
+
+cd
+
+#open some links
+google-chrome https://extensions.gnome.org/extension/1160/dash-to-panel/ &
+google-chrome https://youtu.be/AZniwcfQh3w?t=253 &
+google-chrome https://extensions.gnome.org/extension/19/user-themes/ &
