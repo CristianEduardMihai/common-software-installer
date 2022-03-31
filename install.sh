@@ -1,3 +1,5 @@
+#!/bin/bash
+
 #update and upgrade
 sudo apt update
 sudo apt -y upgrade
@@ -14,19 +16,11 @@ vlc \
 openjdk-16-jre \
 snapd \
 wget \
-obs-studio \
 cheese
 
 #install snap packages
 sudo snap install --classic \
 code
-
-#add minecraft configs
-mkdir ~/.minecraft
-cd ~/.minecraft
-wget https://raw.githubusercontent.com/CristianEduardMihai/common-software-installer/main/configs/options.txt
-wget https://github.com/CristianEduardMihai/common-software-installer/blob/main/configs/optionsof.txt
-
 
 #install chrome, discord, vnc viewer via deb packages
 cd ~/Downloads
@@ -37,3 +31,30 @@ chmod +x *.deb
 sudo apt -y install ./*.deb
 
 rm *.deb
+
+# Install themes and icons
+
+read -r -p "Do you want to install themes and icons ? (y/N): " confirm
+
+# Confirm if the user wants to remove all default configurations
+if [[ "$confirm" =~ [Yy] ]]; then
+    cd
+    git clone git clone https://github.com/vinceliuice/Orchis-theme
+    cd Orchis-theme/
+    ./install.sh
+    cd
+
+    #Tela icon theme
+    git clone https://github.com/vinceliuice/Tela-icon-theme
+    cd Tela-icon-theme/
+    ./install.sh
+    cd
+
+    #open some links
+    google-chrome https://extensions.gnome.org/extension/1160/dash-to-panel/ &
+    google-chrome https://youtu.be/AZniwcfQh3w?t=253 &
+    google-chrome https://extensions.gnome.org/extension/19/user-themes/ &
+else
+    echo "User opted to not install themes and icons. Exiting"
+    exit 1
+fi
