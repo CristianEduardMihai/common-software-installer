@@ -32,7 +32,9 @@ sudo apt -y install ./*.deb
 
 rm *.deb
 
-# Install themes and icons
+# Install themes and icons, disabled
+
+<<COMMENT
 
 cd
 
@@ -55,3 +57,5 @@ echo "https://extensions.gnome.org/extension/1160/dash-to-panel/"
 echo "https://extensions.gnome.org/extension/19/user-themes/"
 
 echo "https://youtu.be/AZniwcfQh3w?t=253"
+
+COMMENT
