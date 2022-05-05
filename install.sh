@@ -7,6 +7,7 @@ sudo apt -y upgrade
 #install apt packages
 sudo apt -y install \
 gnome-tweaks \
+gnome-shell-extension \
 neofetch \
 gparted \
 python3-pip \
