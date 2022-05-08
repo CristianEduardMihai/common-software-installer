@@ -14,7 +14,7 @@ python3-pip \
 git \
 cmake \
 vlc \
-openjdk-16-jre \
+openjdk-17-jdk \
 snapd \
 wget \
 cheese
